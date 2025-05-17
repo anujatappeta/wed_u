@@ -1,0 +1,130 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom right, #ffe0ec, #fff5e6);
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #d6336c;
+  font-size: 48px;
+  margin-top: 60px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #444;
+  margin-top: -10px;
+}
+
+h3 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.event-details {
+  font-size: 18px;
+  color: #5a5a5a;
+  margin: 10px 0 30px;
+  line-height: 1.6;
+}
+
+.message {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+button {
+  background: linear-gradient(45deg, #ff4e91, #ff9a44);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(255, 76, 125, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 76, 125, 0.4);
+}
+
+/* Surprise Section */
+.hidden {
+  display: none;
+}
+
+#surprise {
+  margin-top: 40px;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.surprise-img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.love-note {
+  font-size: 20px;
+  font-style: italic;
+  color: #666;
+  margin: 15px auto;
+  max-width: 600px;
+}
+
+.song-text {
+  font-size: 18px;
+  color: #d6336c;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.3s;
+}
+
+.song-text:hover {
+  color: #a61d4c;
+}
+
+/* Balloons */
+.balloons {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: -1;
+}
+
+.balloon {
+  width: 60px;
+  height: 90px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: float 4s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.red { background-color: #ff4d4d; animation-delay: 0s; }
+.blue { background-color: #4da6ff; animation-delay: 1s; }
+.green { background-color: #4dff88; animation-delay: 2s; }
+.yellow { background-color: #ffe066; animation-delay: 3s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
